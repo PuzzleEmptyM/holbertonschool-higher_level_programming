@@ -2,8 +2,9 @@
 import random
 number = random.randint(-10000, 10000)
 
-# Get the last digit using the modulus operator (%)
+# Calculate the last digit while preserving the sign
 last_digit = abs(number) % 10
+last_digit *= -1 if number < 0 else 1  # Preserve the sign of the original number
 
 print(f"Last digit of {number} is {last_digit}", end=" ")
 
