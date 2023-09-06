@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-str = "Holberton School"
-print(str * 3, end="")
-print(str[:9])
+number = 3.14159
+print(f"Float: {number:.2f}")
