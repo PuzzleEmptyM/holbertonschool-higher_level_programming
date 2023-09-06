@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 
-for char_code in range(97, 123):
-    print("{:c}".format(char_code), end="")
-
-print()  # Print newline character to separate output from the shell
+for char_code in range(ord('a'), ord('z') + 1):
+    print(f"{chr(char_code)}", end="")
