@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 def islower(c):
-    # Check if the ASCII value of the character falls within the lowercase ASCII range
+    # Check if ASCII value of character falls within lowercase ASCII range
     return ord('a') <= ord(c) <= ord('z')
+
 
 if __name__ == "__main__":
     islower = __import__('7-islower').islower
