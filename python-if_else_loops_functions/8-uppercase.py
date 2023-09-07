@@ -6,6 +6,7 @@ def uppercase(s):
         print("{}".format(chr(ord(char) - diff)), end='')
     print()
 
+
 if __name__ == "__main__":
     uppercase("best")
     uppercase("Best School 98 Battery street")
