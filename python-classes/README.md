@@ -1,6 +1,5 @@
 # Python - Classes and Objects
 ## At the end of this project, you are expected to be able to `explain to anyone`, without the help of Google:<br/>
-* How to use the Python interpreter.<br/>
 * What is OOP <br/>
 * “first-class everything” <br/>
 * What is a class <br/>
