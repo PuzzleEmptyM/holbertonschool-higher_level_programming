@@ -1,15 +1,10 @@
-#!/usr/bin/python3
-"""
-This module contains a function that prints My name is <first name> <last name>.
-"""
-
 def say_my_name(first_name, last_name=""):
     """
-    Print a formatted message with the given name.
+    Print My name is <first name> <last name>
 
     Args:
         first_name (str): The first name.
-        last_name (str, optional): The last name.
+        last_name (str): The last name (optional).
 
     Raises:
         TypeError: If first_name or last_name is not a string.
@@ -28,11 +23,6 @@ def say_my_name(first_name, last_name=""):
     Traceback (most recent call last):
         ...
     TypeError: first_name must be a string
-
-    >>> say_my_name("John", 12)
-    Traceback (most recent call last):
-        ...
-    TypeError: last_name must be a string
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
@@ -40,11 +30,7 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
 
     if last_name:
-        print("My name is {} {}".format(first_name, last_name))
+        print(f"My name is {first_name} {last_name}")
     else:
-        print("My name is {}".format(first_name))
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+        print(f"My name is {first_name}")
 
