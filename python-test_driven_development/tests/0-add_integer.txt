@@ -1,31 +1,67 @@
-#!/usr/bin/python3
+#0-add_integer.py
 
-from my_module import add_integer
+================================
+Function that adds two integers:
+================================
 
-# Test case 1: Adding two integers
->>> add_integer(1, 2)
-3
+The function takes two arguments 'a' and 'b' as input, and returns the result
+of their sum as an integer.
 
-# Test case 2: Adding an integer and a negative integer
->>> add_integer(100, -2)
-98
+===========
+Parameters:
+===========
 
-# Test case 3: Adding an integer and the default value
->>> add_integer(2)
-100
+'a' - int or float, first integer to be added
+'b' - int or float, second integer to be added
 
-# Test case 4: Adding a float and a negative integer
->>> add_integer(100.3, -2)
-98
+=======
+Return:
+=======
 
-# Test case 5: Invalid input (string)
->>> add_integer(4, "School")
+The sum of 'a' and 'b' as integers
+
+=======
+Raises:
+=======
+
+If 'a' or 'b' are not integers or floats, TypeError is raised
+
+===========
+How to use:
+===========
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(3, 2)
+5
+>>> add_integer(10, 11)
+21
+>>> add_integer(10000000, 5000000000)
+5010000000
+>>> add_integer(3.5, 4.6)
+8
+>>> add_integer(3.9, 6.7)
+11
+>>> add_integer(-3, -5)
+-8
+>>> add_integer(-3, 5)
+2
+>>> add_integer('a', 3)
 Traceback (most recent call last):
-    ...
-TypeError: a must be an integer or b must be an integer
-
-# Test case 6: Invalid input (None)
->>> add_integer(None)
+  File "<stdin>", line 1, in <module>
+  File "/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 5, in add_integer
+    raise TypeError("a must be an integer")
+TypeError: a must be an integer
+>>> add_integer(3, '5')
 Traceback (most recent call last):
-    ...
-TypeError: a must be an integer or b must be an integer
+  File "<stdin>", line 1, in <module>
+  File "/holbertonschool-higher_level_programming/python-test_driven_development/0-add_integer.py", line 7, in add_integer
+    raise TypeError("b must be an integer")
+TypeError: b must be an integer
+>>> add_integer()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add_integer() missing 1 required positional argument: 'a'
+>>> add_integer(float('yo'), float('yo'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: could not convert string to float: 'yo'
