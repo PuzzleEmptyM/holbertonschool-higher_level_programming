@@ -1,36 +1,34 @@
-def say_my_name(first_name, last_name=""):
-    """
-    Print My name is <first name> <last name>
+The "3-say_my_name" Module
+==========================
 
-    Args:
-        first_name (str): The first name.
-        last_name (str): The last name (optional).
+Using ``say_my_name``
+---------------------
 
-    Raises:
-        TypeError: If first_name or last_name is not a string.
+Import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-    Example:
-    >>> say_my_name("John", "Smith")
-    My name is John Smith
+Regular test:
+    >>> say_my_name("Eric", "Dzyk")
+    My name is Eric Dzyk
 
-    >>> say_my_name("Walter", "White")
-    My name is Walter White
+Test with one arguemet:
+    >>> say_my_name("John")
+    My name is John 
 
-    >>> say_my_name("Bob", " ")
-    My name is Bob
-
-    >>> say_my_name(12, "White")
+Testing one int, one string:
+    >>> say_my_name(31, "George")
     Traceback (most recent call last):
-        ...
+    ...
     TypeError: first_name must be a string
-    """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
 
-    if last_name:
-        print(f"My name is {first_name} {last_name}")
-    else:
-        print(f"My name is {first_name}")
+Testing one string, one int:
+    >>> say_my_name("Alejandro", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
 
+Two missing args:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
