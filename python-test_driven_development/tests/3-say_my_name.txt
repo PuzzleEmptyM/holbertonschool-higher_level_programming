@@ -8,21 +8,21 @@ Import module:
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Regular test:
-    >>> say_my_name("Eric", "Dzyk")
-    My name is Eric Dzyk
+    >>> say_my_name("Puzzle", "Moser")
+    My name is Puzzle Moser
 
 Test with one arguemet:
     >>> say_my_name("John")
     My name is John 
 
 Testing one int, one string:
-    >>> say_my_name(31, "George")
+    >>> say_my_name(31, "Bob")
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
 
 Testing one string, one int:
-    >>> say_my_name("Alejandro", 1)
+    >>> say_my_name("Francis", 1)
     Traceback (most recent call last):
     ...
     TypeError: last_name must be a string
