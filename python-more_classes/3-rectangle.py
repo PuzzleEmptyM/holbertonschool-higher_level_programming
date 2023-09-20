@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represents a rectangle."""
-
+    
     def __init__(self, width=0, height=0):
         """Initializes a new instance of the Rectangle class."""
         self.width = width
@@ -52,4 +52,4 @@ class Rectangle:
         """Returns a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return '\n'.join(['#' * self.__width] * self.__height) + '\n'
+        return '\n'.join(['#' * self.__width] * self.__height)
