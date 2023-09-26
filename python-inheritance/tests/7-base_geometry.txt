@@ -18,7 +18,7 @@ Exception: area() is not implemented
 
 >>> MrTestMan.integer_validator("Eric", 4)
 
->>> MrTestMan.integer_validator("Eric", "Dude")
+>>> MrTestMan.integer_validator("Eric", "Sammy")
 Traceback (most recent call last):
 ...
 TypeError: Eric must be an integer
@@ -63,12 +63,12 @@ Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> MrTestMan.integer_validator("Dude")
+>>> MrTestMan.integer_validator("Sammy")
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> MrTestMan.integer_validator(1, "Dude")
+>>> MrTestMan.integer_validator(1, "Sammy")
 Traceback (most recent call last):
 ...
 TypeError: 1 must be an integer
