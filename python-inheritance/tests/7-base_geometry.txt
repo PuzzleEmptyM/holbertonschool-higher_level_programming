@@ -1,11 +1,11 @@
 ~ ``base_geometry`` BaseGeometry ~
 ==================================
 
-import the thing to get started:
+import module:
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-proceed:
+run:
 
 >>> MrTestMan = BaseGeometry()
 >>> type(MrTestMan)
