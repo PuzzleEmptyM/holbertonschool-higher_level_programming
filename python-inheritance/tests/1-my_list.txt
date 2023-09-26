@@ -1,0 +1,72 @@
+~ ``my_list`` MyList ~
+======================
+
+import module:
+
+>>> MyList = __import__('1-my_list').MyList
+
+run:
+
+>>> issubclass(MyList, list)
+True
+>>> MrTestMan = MyList()
+>>> type(MrTestMan)
+<class '1-my_list.MyList'>
+>>> print(MrTestMan)
+[]
+>>> 'print_sorted' in dir(MrTestMan)
+True
+>>> MrTestMan.print_sorted()
+[]
+>>> MrTestMan = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+>>> MrTestMan = MyList([2, 4, 8])
+>>> print(MrTestMan)
+[2, 4, 8]
+>>> MrTestMan.print_sorted()
+[2, 4, 8]
+>>> MrTestMan = MyList()
+>>> MrTestMan.append(4)
+>>> MrTestMan.print_sorted()
+[4]
+>>> MrTestMan.append(8)
+>>> MrTestMan.append(16)
+>>> MrTestMan.print_sorted()
+[4, 8, 16]
+>>> MrTestMan.append(2)
+>>> MrTestMan.print_sorted()
+[2, 4, 8, 16]
+>>> MrTestMan.append(-32)
+>>> print(MrTestMan)
+[4, 8, 16, 2, -32]
+>>> MrTestMan.print_sorted()
+[-32, 2, 4, 8, 16]
+>>> MrTestMan = MyList()
+>>> MrTestMan.append(-1337)
+>>> MrTestMan.print_sorted()
+[-1337]
+>>> MrTestMan.append(-69)
+>>> MrTestMan.append(-420)
+>>> MrTestMan.print_sorted()
+[-1337, -420, -69]
+>>> print(MrTestMan)
+[-1337, -69, -420]
+>>> MrTestMan.append(-0)
+>>> print(MrTestMan)
+[-1337, -69, -420, 0]
+>>> MrTestMan.print_sorted()
+[-1337, -420, -69, 0]
+>>> MrTestMan.append('string')
+>>> print(MrTestMan)
+[-1337, -69, -420, 0, 'string']
+>>> MrTestMan.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>> del MrTestMan
+>>> print(MrTestMan)
+Traceback (most recent call last):
+...
+NameError: name 'MrTestMan' is not defined
