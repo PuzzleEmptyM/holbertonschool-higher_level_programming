@@ -1,0 +1,86 @@
+~ ``base_geometry`` BaseGeometry ~
+==================================
+
+import the thing to get started:
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+proceed:
+
+>>> MrTestMan = BaseGeometry()
+>>> type(MrTestMan)
+<class '7-base_geometry.BaseGeometry'>
+
+>>> MrTestMan.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> MrTestMan.integer_validator("Eric", 4)
+
+>>> MrTestMan.integer_validator("Eric", "Dude")
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator("Eric", -4)
+Traceback (most recent call last):
+...
+ValueError: Eric must be greater than 0
+
+>>> MrTestMan.integer_validator("Eric", 0)
+Traceback (most recent call last):
+...
+ValueError: Eric must be greater than 0
+
+>>> MrTestMan.integer_validator("Eric", None)
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator("Eric", (2, 4))
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator("Eric", [2, 4])
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator("Eric", {2, 4})
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator("Eric", False)
+Traceback (most recent call last):
+...
+TypeError: Eric must be an integer
+
+>>> MrTestMan.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> MrTestMan.integer_validator("Dude")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> MrTestMan.integer_validator(1, "Dude")
+Traceback (most recent call last):
+...
+TypeError: 1 must be an integer
+
+>>> MrTestMan.integer_validator([1, 2], 2)
+
+>>> MrTestMan.integer_validator([1, 2], -2)
+Traceback (most recent call last):
+...
+ValueError: [1, 2] must be greater than 0
+
+>>> MrTestMan.integer_validator([1, 2], [4, 8])
+Traceback (most recent call last):
+...
+TypeError: [1, 2] must be an integer
