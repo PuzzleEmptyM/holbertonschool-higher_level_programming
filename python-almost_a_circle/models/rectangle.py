@@ -77,9 +77,9 @@ class Rectangle(Base):
         """ Displays # character for rectangle area """
         for y in range(self.y):
             print()
-        for hite in range(self.__height):
+        for height in range(self.__height):
             for x in range(self.x):
                 print(" ", end="")
-            for wdth in range(self.__width):
+            for width in range(self.__width):
                 print("#", end="")
             print()
