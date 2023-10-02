@@ -73,8 +73,13 @@ class Rectangle(Base):
         """ Method to calculate and return the area of the rectangle """
         return self.__width * self.__height
 
-
     def display(self):
-        """ Method to print the Rectangle instance with '#' character """
-        for _ in range(self.__height):
-            print("#" * self.__width)
+        """ Displays # character for rectangle area """
+        for y in range(self.y):
+            print()
+        for hite in range(self.__height):
+            for x in range(self.x):
+                print(" ", end="")
+            for wdth in range(self.__width):
+                print("#", end="")
+            print()
