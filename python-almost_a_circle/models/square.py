@@ -19,6 +19,29 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """ Assigns an arg to each attribute """
+        if not args:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "size":
+                    self.size = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+        else:
+            for idx, item in enumerate(args):
+                if idx == 0:
+                    self.id = item
+                if idx == 1:
+                    self.size = item
+                if idx == 2:
+                    self.x = item
+                if idx == 3:
+                    self.y = item
+
     def __str__(self):
         """ Override the string representation of Square instances """
         return ("[Square] ({}) {}/{} - {}".
