@@ -4,14 +4,14 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Square class, inherits from Rectangle """
+    """ Initializing constructor """
     def __init__(self, size, x=0, y=0, id=None):
-        """ Constructor for Square class """
+        """ Initializing class Methods/Attributes """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """ Getter for size """
+        """ Setting for size attribute """
         return self.width
 
     @size.setter
@@ -42,7 +42,11 @@ class Square(Rectangle):
                 if idx == 3:
                     self.y = item
 
+    def to_dictionary(self):
+        """ Function that returns dictionary representation """
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
+
     def __str__(self):
-        """ Override the string representation of Square instances """
+        """ function to return string """
         return ("[Square] ({}) {}/{} - {}".
                 format(self.id, self.x, self.y, self.width))
