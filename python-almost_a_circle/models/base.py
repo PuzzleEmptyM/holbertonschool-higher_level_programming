@@ -54,6 +54,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """ Function that returns a list to instance """
         try:
             empty_list = []
             with open(cls.__name__ + ".json") as f:
