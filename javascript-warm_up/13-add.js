@@ -5,5 +5,5 @@ function add (a, b) {
   return a + b;
 }
 
-// Export the add function to make it visible from outside
-module.exports = add;
+// Export the add function as a property of the module object
+module.exports.add = add;
