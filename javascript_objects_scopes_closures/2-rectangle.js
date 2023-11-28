@@ -2,16 +2,16 @@
 
 class Rectangle {
   constructor(w, h) {
-    if (w <= 0 || h <= 0 || typeof w !== 'number'
-    || typeof h !== 'number') {
-      // Create an instance with default values if conditions are not met
-      this.width = 0;
-      this.height = 0;
-    } else {
-      // Initialize instance attributes
-      this.width = w;
-      this.height = h;
+    if (w <= 0 || typeof w !== 'number') {
+      w = 0;
     }
+    if (h <= 0 || typeof h !== 'number') {
+      h = 0;
+    }
+
+    // Initialize instance attributes
+    this.width = w;
+    this.height = h;
   }
 }
 
