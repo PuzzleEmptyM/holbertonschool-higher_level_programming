@@ -1,19 +1,10 @@
 #!/usr/bin/node
 
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || typeof w !== 'number') {
-      w = 0;
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
     }
-    if (h <= 0 || typeof h !== 'number') {
-      h = 0;
-    }
-
-    // Initialize instance attributes
-    this.width = w;
-    this.height = h;
   }
-}
-
-// Export the Rectangle class
-module.exports = Rectangle;
+};
